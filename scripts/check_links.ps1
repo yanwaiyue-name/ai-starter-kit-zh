@@ -54,6 +54,16 @@ function Test-Url {
     }
     return @{ Code=0; Final=$null }
 }
+function Set-Prop {
+    # modules.json 里没有 http_code / last_checked 这些体检字段。
+    # 直接 $m.http_code = ... 会抛「property cannot be found」，必须先判断再 Add-Member。
+    param($Object, [string]$Name, $Value)
+    if ($Object.PSObject.Properties.Name -contains $Name) {
+        $Object.$Name = $Value
+    } else {
+        $Object | Add-Member -NotePropertyName $Name -NotePropertyValue $Value -Force
+    }
+}
 function Get-RemoteFetchVerdict {
     param([string]$Url)
     $c = $null
@@ -92,10 +102,10 @@ try {
             if ($r2.Code -gt 0) { $best = 'proxy'; $bestCode = $r2.Code }
         }
         if ($best) {
-            $m.status='ok'; $m.http_code=$bestCode
-            if ($m.PSObject.Properties.Name -contains 'reachable_via') { $m.reachable_via=$best } else { $m | Add-Member -NotePropertyName 'reachable_via' -NotePropertyValue $best -Force }
+            Set-Prop $m 'status' 'ok'; Set-Prop $m 'http_code' $bestCode
+            Set-Prop $m 'reachable_via' $best
         } else {
-            $m.http_code=0
+            Set-Prop $m 'http_code' 0
             if ($Runner -eq 'github-actions') {
                 if ($prevStatus -eq 'ok') { $m.status='unknown' }
                 elseif ($prevStatus -in @('unknown','dead')) {
@@ -105,7 +115,7 @@ try {
                 } else { $m.status='unknown' }
             } elseif ($m.status -ne 'dead') { $m.status='unknown' }
         }
-        $m.last_checked=$today; $m.checked_from=$Runner
+        Set-Prop $m 'last_checked' $today; Set-Prop $m 'checked_from' $Runner
         switch ($m.status) { 'ok'{$ok++} 'dead'{$dead++} default{$unknown++} }
         Write-Host ("{0,-26} -> {1,-8}" -f $m.name, $m.status)
         $rows.Add(("| {0} | {1} | {2} | {3} |" -f $m.name, $m.stage, $m.status, $m.url))
