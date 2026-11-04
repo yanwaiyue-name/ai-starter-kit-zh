@@ -12,7 +12,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/状态-维护中-blue)
-[![validate-pr](https://github.com/yanwaiyue-name/ai-starter-kit-zh/actions/workflows/validate-pr.yml/badge.svg)](https://github.com/yanwaiyue-name/ai-starter-kit-zh/actions/workflows/validate-pr.yml)
+[![deploy-pages](https://github.com/yanwaiyue-name/ai-starter-kit-zh/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/yanwaiyue-name/ai-starter-kit-zh/actions/workflows/deploy-pages.yml)
 
 </div>
 
@@ -40,7 +40,7 @@ pwsh scripts/setup.ps1
 ```
 
 ```bash
-# macOS / Linux / Git Bash
+# macOS / Linux / Git Bash（需要 jq，脚本会先检查并提示安装命令）
 bash scripts/setup.sh
 ```
 
