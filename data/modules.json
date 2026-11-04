@@ -9,9 +9,11 @@
     "repo": "yanwaiyue-name/xiaobai-to-dalao",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "先有能跑的开发环境和网络常识，后面所有工具才装得上。",
-    "pages_url": "https://yanwaiyue-name.github.io/xiaobai-to-dalao/"
+    "pages_url": "https://yanwaiyue-name.github.io/xiaobai-to-dalao/",
+    "http_code": 200,
+    "reachable_via": "direct"
   },
   {
     "order": 2,
@@ -23,9 +25,11 @@
     "repo": "yanwaiyue-name/airport-nav",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "大部分 AI 工具需要访问境外服务，先把网络通道打通再下载。",
-    "pages_url": "https://yanwaiyue-name.github.io/airport-nav/"
+    "pages_url": "https://yanwaiyue-name.github.io/airport-nav/",
+    "http_code": 200,
+    "reachable_via": "direct"
   },
   {
     "order": 3,
@@ -37,9 +41,11 @@
     "repo": "yanwaiyue-name/agent-download",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "环境就绪后装客户端，按架构选版本并校验 SHA256，避免下到捆绑包。",
-    "pages_url": "https://yanwaiyue-name.github.io/agent-download/"
+    "pages_url": "https://yanwaiyue-name.github.io/agent-download/",
+    "http_code": 200,
+    "reachable_via": "direct"
   },
   {
     "order": 4,
@@ -51,9 +57,11 @@
     "repo": "yanwaiyue-name/ai-agent-hub-zh",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "有了客户端，才谈得上挑编码代理、Skills 和额度网关。",
-    "pages_url": "https://yanwaiyue-name.github.io/ai-agent-hub-zh/"
+    "pages_url": "https://yanwaiyue-name.github.io/ai-agent-hub-zh/",
+    "http_code": 200,
+    "reachable_via": "direct"
   },
   {
     "order": 5,
@@ -65,9 +73,11 @@
     "repo": "yanwaiyue-name/ai-sidehustle-zh",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "工具会用了，再看哪些路子真能变现，以及证据有多硬。",
-    "pages_url": "https://yanwaiyue-name.github.io/ai-sidehustle-zh/"
+    "pages_url": "https://yanwaiyue-name.github.io/ai-sidehustle-zh/",
+    "http_code": 200,
+    "reachable_via": "direct"
   },
   {
     "order": 6,
@@ -79,8 +89,10 @@
     "repo": "yanwaiyue-name/students-howtolivebetter",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed",
+    "checked_from": "github-actions",
     "why": "最后算大账：时间、钱和不可逆的选择，值不值得投进去。",
-    "pages_url": "https://yanwaiyue-name.github.io/students-howtolivebetter/"
+    "pages_url": "https://yanwaiyue-name.github.io/students-howtolivebetter/",
+    "http_code": 200,
+    "reachable_via": "direct"
   }
 ]
