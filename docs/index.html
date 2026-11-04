@@ -5,19 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中文 AI 玩家从 0 到 1 · 启动套件</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 1000px; margin: 2rem auto; padding: 0 1rem; color:#1a1a1a; line-height:1.6; }
-  h1 { text-align:center; }
-  .sub { text-align:center; color:#666; margin-bottom:1.5rem; }
-  .summary { display:flex; gap:1rem; justify-content:center; margin-bottom:2rem; flex-wrap:wrap; }
-  .summary div { background:#f5f5f7; border-radius:8px; padding:.6rem 1.2rem; }
-  table { width:100%; border-collapse:collapse; font-size:.9rem; }
-  th, td { text-align:left; padding:.6rem .7rem; border-bottom:1px solid #eee; vertical-align:top; }
-  th { background:#fafafa; }
-  .ord { font-size:1.4em; font-weight:bold; color:#0078d4; text-align:center; }
-  .stage { color:#0078d4; font-size:.8em; }
-  .ok { color:#1a7f37; } .dead { color:#cf222e; } .unk { color:#9a6700; }
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color:#1a1a1a; line-height:1.6; }
+  h1 { text-align:center; margin-bottom:.3rem; }
+  .sub { text-align:center; color:#666; margin:0 0 1.2rem; }
+  .summary { display:flex; gap:.8rem; justify-content:center; margin-bottom:1.5rem; flex-wrap:wrap; }
+  .summary div { background:#f5f5f7; border-radius:8px; padding:.5rem 1.1rem; font-size:.9rem; }
+  .howto { background:#eef6ff; border-left:4px solid #0078d4; padding:.8rem 1rem; border-radius:4px; font-size:.9rem; margin-bottom:2rem; }
+  .howto code { background:#dce9f7; padding:.1rem .4rem; border-radius:4px; }
+  .card { display:flex; gap:1rem; border:1px solid #e5e5e5; border-radius:10px; padding:1rem 1.2rem; margin-bottom:1rem; position:relative; }
+  .card:not(:last-child)::after { content:''; position:absolute; left:2.05rem; bottom:-1rem; width:2px; height:1rem; background:#0078d4; }
+  .ord { flex:0 0 2.2rem; height:2.2rem; border-radius:50%; background:#0078d4; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.15rem; font-weight:bold; }
+  .body { flex:1; min-width:0; }
+  .head { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; }
+  .stage { color:#0078d4; font-size:.85em; font-weight:bold; }
+  .repo { font-family:ui-monospace,Consolas,monospace; font-size:.85em; }
+  h2 { font-size:1.05rem; margin:.35rem 0; }
+  .desc { margin:.2rem 0; color:#444; font-size:.92rem; }
+  .why { margin:.5rem 0; font-size:.86rem; color:#555; background:#fafafa; padding:.4rem .7rem; border-radius:4px; }
+  .links { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; font-size:.85rem; margin-top:.5rem; }
+  .badge { font-size:.78em; padding:.1rem .45rem; border-radius:4px; white-space:nowrap; }
+  .ok { color:#1a7f37; background:#dafbe1; } .dead { color:#cf222e; background:#ffebe9; } .unk { color:#9a6700; background:#fff8c5; }
+  .meta { color:#888; }
   a { color:#0078d4; text-decoration:none; } a:hover { text-decoration:underline; }
   footer { margin-top:3rem; text-align:center; color:#999; font-size:.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background:#0d1117; color:#e6edf3; }
+    .summary div, .why { background:#161b22; color:#e6edf3; }
+    .card { border-color:#30363d; }
+    .howto { background:#0d2a4a; }
+    .howto code { background:#17395e; }
+    .desc { color:#c9d1d9; }
+  }
 </style>
 </head>
 <body>
@@ -26,49 +45,121 @@
   <div class="summary">
     <div>模块 <b>6</b></div>
     <div>存活 <b>6</b></div>
-    <div>更新 <b>2026-11-03</b></div>
+    <div>更新 <b>2026-11-04</b></div>
   </div>
-  <table>
-    <thead><tr><th>#</th><th>模块</th><th>说明</th><th>状态</th></tr></thead>
-    <tbody>
-    <tr>
-      <td class="ord">1</td>
-      <td><a href="https://github.com/yanwaiyue-name/xiaobai-to-dalao" target="_blank" rel="noopener">[string]@{order=1; stage=环境; name=xiaobai-to-dalao; title=纯小白计算机入门教程; desc=科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker; url=https://github.com/yanwaiyue-name/xiaobai-to-dalao; repo=yanwaiyue-name/xiaobai-to-dalao; local_path=../xiaobai-to-dalao; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=1; stage=环境; name=xiaobai-to-dalao; title=纯小白计算机入门教程; desc=科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker; url=https://github.com/yanwaiyue-name/xiaobai-to-dalao; repo=yanwaiyue-name/xiaobai-to-dalao; local_path=../xiaobai-to-dalao; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=1; stage=环境; name=xiaobai-to-dalao; title=纯小白计算机入门教程; desc=科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker; url=https://github.com/yanwaiyue-name/xiaobai-to-dalao; repo=yanwaiyue-name/xiaobai-to-dalao; local_path=../xiaobai-to-dalao; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=1; stage=环境; name=xiaobai-to-dalao; title=纯小白计算机入门教程; desc=科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker; url=https://github.com/yanwaiyue-name/xiaobai-to-dalao; repo=yanwaiyue-name/xiaobai-to-dalao; local_path=../xiaobai-to-dalao; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    <tr>
-      <td class="ord">2</td>
-      <td><a href="https://github.com/yanwaiyue-name/airport-nav" target="_blank" rel="noopener">[string]@{order=2; stage=网络; name=airport-nav; title=机场导航; desc=低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活; url=https://github.com/yanwaiyue-name/airport-nav; repo=yanwaiyue-name/airport-nav; local_path=../airport-nav; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=2; stage=网络; name=airport-nav; title=机场导航; desc=低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活; url=https://github.com/yanwaiyue-name/airport-nav; repo=yanwaiyue-name/airport-nav; local_path=../airport-nav; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=2; stage=网络; name=airport-nav; title=机场导航; desc=低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活; url=https://github.com/yanwaiyue-name/airport-nav; repo=yanwaiyue-name/airport-nav; local_path=../airport-nav; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=2; stage=网络; name=airport-nav; title=机场导航; desc=低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活; url=https://github.com/yanwaiyue-name/airport-nav; repo=yanwaiyue-name/airport-nav; local_path=../airport-nav; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    <tr>
-      <td class="ord">3</td>
-      <td><a href="https://github.com/yanwaiyue-name/agent-download" target="_blank" rel="noopener">[string]@{order=3; stage=工具; name=agent-download; title=AI 客户端下载中心; desc=47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验; url=https://github.com/yanwaiyue-name/agent-download; repo=yanwaiyue-name/agent-download; local_path=../agent-download; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=3; stage=工具; name=agent-download; title=AI 客户端下载中心; desc=47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验; url=https://github.com/yanwaiyue-name/agent-download; repo=yanwaiyue-name/agent-download; local_path=../agent-download; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=3; stage=工具; name=agent-download; title=AI 客户端下载中心; desc=47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验; url=https://github.com/yanwaiyue-name/agent-download; repo=yanwaiyue-name/agent-download; local_path=../agent-download; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=3; stage=工具; name=agent-download; title=AI 客户端下载中心; desc=47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验; url=https://github.com/yanwaiyue-name/agent-download; repo=yanwaiyue-name/agent-download; local_path=../agent-download; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    <tr>
-      <td class="ord">4</td>
-      <td><a href="https://github.com/yanwaiyue-name/ai-agent-hub-zh" target="_blank" rel="noopener">[string]@{order=4; stage=折腾 Agent; name=ai-agent-hub-zh; title=AI Agent 工坊 · 中文资源导航; desc=编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检; url=https://github.com/yanwaiyue-name/ai-agent-hub-zh; repo=yanwaiyue-name/ai-agent-hub-zh; local_path=../ai-agent-hub-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=4; stage=折腾 Agent; name=ai-agent-hub-zh; title=AI Agent 工坊 · 中文资源导航; desc=编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检; url=https://github.com/yanwaiyue-name/ai-agent-hub-zh; repo=yanwaiyue-name/ai-agent-hub-zh; local_path=../ai-agent-hub-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=4; stage=折腾 Agent; name=ai-agent-hub-zh; title=AI Agent 工坊 · 中文资源导航; desc=编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检; url=https://github.com/yanwaiyue-name/ai-agent-hub-zh; repo=yanwaiyue-name/ai-agent-hub-zh; local_path=../ai-agent-hub-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=4; stage=折腾 Agent; name=ai-agent-hub-zh; title=AI Agent 工坊 · 中文资源导航; desc=编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检; url=https://github.com/yanwaiyue-name/ai-agent-hub-zh; repo=yanwaiyue-name/ai-agent-hub-zh; local_path=../ai-agent-hub-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    <tr>
-      <td class="ord">5</td>
-      <td><a href="https://github.com/yanwaiyue-name/ai-sidehustle-zh" target="_blank" rel="noopener">[string]@{order=5; stage=搞副业; name=ai-sidehustle-zh; title=中文 AI 副业实战导航; desc=真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处; url=https://github.com/yanwaiyue-name/ai-sidehustle-zh; repo=yanwaiyue-name/ai-sidehustle-zh; local_path=../ai-sidehustle-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=5; stage=搞副业; name=ai-sidehustle-zh; title=中文 AI 副业实战导航; desc=真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处; url=https://github.com/yanwaiyue-name/ai-sidehustle-zh; repo=yanwaiyue-name/ai-sidehustle-zh; local_path=../ai-sidehustle-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=5; stage=搞副业; name=ai-sidehustle-zh; title=中文 AI 副业实战导航; desc=真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处; url=https://github.com/yanwaiyue-name/ai-sidehustle-zh; repo=yanwaiyue-name/ai-sidehustle-zh; local_path=../ai-sidehustle-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=5; stage=搞副业; name=ai-sidehustle-zh; title=中文 AI 副业实战导航; desc=真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处; url=https://github.com/yanwaiyue-name/ai-sidehustle-zh; repo=yanwaiyue-name/ai-sidehustle-zh; local_path=../ai-sidehustle-zh; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    <tr>
-      <td class="ord">6</td>
-      <td><a href="https://github.com/yanwaiyue-name/students-howtolivebetter" target="_blank" rel="noopener">[string]@{order=6; stage=算大账; name=students-howtolivebetter; title=学生版 · 高性价比人生指南; desc=写给 18-25 岁，每条写明成本、收益、证据等级与官方出处; url=https://github.com/yanwaiyue-name/students-howtolivebetter; repo=yanwaiyue-name/students-howtolivebetter; local_path=../students-howtolivebetter; status=ok; last_checked=2026-11-04; checked_from=seed}.name</a><br><span class="stage">[string]@{order=6; stage=算大账; name=students-howtolivebetter; title=学生版 · 高性价比人生指南; desc=写给 18-25 岁，每条写明成本、收益、证据等级与官方出处; url=https://github.com/yanwaiyue-name/students-howtolivebetter; repo=yanwaiyue-name/students-howtolivebetter; local_path=../students-howtolivebetter; status=ok; last_checked=2026-11-04; checked_from=seed}.stage</span></td>
-      <td><b>[string]@{order=6; stage=算大账; name=students-howtolivebetter; title=学生版 · 高性价比人生指南; desc=写给 18-25 岁，每条写明成本、收益、证据等级与官方出处; url=https://github.com/yanwaiyue-name/students-howtolivebetter; repo=yanwaiyue-name/students-howtolivebetter; local_path=../students-howtolivebetter; status=ok; last_checked=2026-11-04; checked_from=seed}.title</b><br>[string]@{order=6; stage=算大账; name=students-howtolivebetter; title=学生版 · 高性价比人生指南; desc=写给 18-25 岁，每条写明成本、收益、证据等级与官方出处; url=https://github.com/yanwaiyue-name/students-howtolivebetter; repo=yanwaiyue-name/students-howtolivebetter; local_path=../students-howtolivebetter; status=ok; last_checked=2026-11-04; checked_from=seed}.desc</td>
-      <td><span class="ok">✅ 存活</span></td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="howto">
+    <b>一键把六个模块拉到本地</b>（按路线顺序，已存在的目录会跳过、不覆盖）：<br>
+    Windows：<code>pwsh scripts/setup.ps1</code>　·　macOS / Linux / Git Bash：<code>bash scripts/setup.sh</code><br>
+    只想在线读，直接点每张卡片的「在线读」即可。
+  </div>
+    <article class="card">
+      <div class="ord">1</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">环境</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/xiaobai-to-dalao" target="_blank" rel="noopener">xiaobai-to-dalao</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>纯小白计算机入门教程</h2>
+        <p class="desc">科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker</p>
+        <div class="why"><b>为什么排在这：</b>先有能跑的开发环境和网络常识，后面所有工具才装得上。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/xiaobai-to-dalao" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/xiaobai-to-dalao/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="ord">2</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">网络</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/airport-nav" target="_blank" rel="noopener">airport-nav</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>机场导航</h2>
+        <p class="desc">低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活</p>
+        <div class="why"><b>为什么排在这：</b>大部分 AI 工具需要访问境外服务，先把网络通道打通再下载。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/airport-nav" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/airport-nav/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="ord">3</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">工具</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/agent-download" target="_blank" rel="noopener">agent-download</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>AI 客户端下载中心</h2>
+        <p class="desc">47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验</p>
+        <div class="why"><b>为什么排在这：</b>环境就绪后装客户端，按架构选版本并校验 SHA256，避免下到捆绑包。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/agent-download" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/agent-download/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="ord">4</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">折腾 Agent</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/ai-agent-hub-zh" target="_blank" rel="noopener">ai-agent-hub-zh</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>AI Agent 工坊 · 中文资源导航</h2>
+        <p class="desc">编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检</p>
+        <div class="why"><b>为什么排在这：</b>有了客户端，才谈得上挑编码代理、Skills 和额度网关。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/ai-agent-hub-zh" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/ai-agent-hub-zh/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="ord">5</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">搞副业</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/ai-sidehustle-zh" target="_blank" rel="noopener">ai-sidehustle-zh</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>中文 AI 副业实战导航</h2>
+        <p class="desc">真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处</p>
+        <div class="why"><b>为什么排在这：</b>工具会用了，再看哪些路子真能变现，以及证据有多硬。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/ai-sidehustle-zh" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/ai-sidehustle-zh/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="ord">6</div>
+      <div class="body">
+        <div class="head">
+          <span class="stage">算大账</span>
+          <a class="repo" href="https://github.com/yanwaiyue-name/students-howtolivebetter" target="_blank" rel="noopener">students-howtolivebetter</a>
+          <span class="badge ok">✅ 存活</span>
+        </div>
+        <h2>学生版 · 高性价比人生指南</h2>
+        <p class="desc">写给 18-25 岁，每条写明成本、收益、证据等级与官方出处</p>
+        <div class="why"><b>为什么排在这：</b>最后算大账：时间、钱和不可逆的选择，值不值得投进去。</div>
+        <div class="links">
+          <a href="https://github.com/yanwaiyue-name/students-howtolivebetter" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://yanwaiyue-name.github.io/students-howtolivebetter/" target="_blank" rel="noopener">在线读 ↗</a>
+          <span class="meta">最近体检 2026-11-04</span>
+        </div>
+      </div>
+    </article>
   <footer>本页由 scripts/render.ps1 从 data/modules.json 生成 · 所有内容指向官方上游</footer>
 </body>
 </html>

@@ -84,10 +84,15 @@ try {
         $u = [string]$m.url
         $res = Test-Url -Client $client -Url $u -Attempts $Retry
         $best = $null
-        if ($res.Code -gt 0) { $best = 'direct' }
-        elseif ($proxyClient) { $r2 = Test-Url -Client $proxyClient -Url $u -Attempts 1; if ($r2.Code -gt 0) { $best='proxy' } }
+        $bestCode = 0
+        if ($res.Code -gt 0) { $best = 'direct'; $bestCode = $res.Code }
+        elseif ($proxyClient) {
+            $r2 = Test-Url -Client $proxyClient -Url $u -Attempts 1
+            # 走代理探到时要用代理那次的 HTTP 码，不能沿用直连的 0
+            if ($r2.Code -gt 0) { $best = 'proxy'; $bestCode = $r2.Code }
+        }
         if ($best) {
-            $m.status='ok'; $m.http_code=$res.Code
+            $m.status='ok'; $m.http_code=$bestCode
             if ($m.PSObject.Properties.Name -contains 'reachable_via') { $m.reachable_via=$best } else { $m | Add-Member -NotePropertyName 'reachable_via' -NotePropertyValue $best -Force }
         } else {
             $m.http_code=0

@@ -1,0 +1,33 @@
+name: validate-pr
+
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 校验模块数据
+        shell: pwsh
+        run: ./scripts/validate.ps1
+
+      - name: 校验渲染脚本可运行
+        shell: pwsh
+        run: |
+          ./scripts/render.ps1 -OutPath $env:RUNNER_TEMP/index.html
+          if (-not (Test-Path $env:RUNNER_TEMP/index.html)) { throw '渲染未产出文件' }
+
+      - name: 校验一键启动脚本语法（bash -n）
+        shell: bash
+        run: bash -n scripts/setup.sh

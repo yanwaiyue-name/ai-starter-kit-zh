@@ -7,10 +7,11 @@
     "desc": "科学上网 + 软件环境部署（Windows 优先）：Git / Python / Node / Docker",
     "url": "https://github.com/yanwaiyue-name/xiaobai-to-dalao",
     "repo": "yanwaiyue-name/xiaobai-to-dalao",
-    "local_path": "../xiaobai-to-dalao",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "先有能跑的开发环境和网络常识，后面所有工具才装得上。",
+    "pages_url": "https://yanwaiyue-name.github.io/xiaobai-to-dalao/"
   },
   {
     "order": 2,
@@ -20,10 +21,11 @@
     "desc": "低价/性价比机场、客户端速查、新手避坑，每周自动体检入口存活",
     "url": "https://github.com/yanwaiyue-name/airport-nav",
     "repo": "yanwaiyue-name/airport-nav",
-    "local_path": "../airport-nav",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "大部分 AI 工具需要访问境外服务，先把网络通道打通再下载。",
+    "pages_url": "https://yanwaiyue-name.github.io/airport-nav/"
   },
   {
     "order": 3,
@@ -33,10 +35,11 @@
     "desc": "47 款 AI 客户端官方下载，按架构自动选版本，SHA256 校验",
     "url": "https://github.com/yanwaiyue-name/agent-download",
     "repo": "yanwaiyue-name/agent-download",
-    "local_path": "../agent-download",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "环境就绪后装客户端，按架构选版本并校验 SHA256，避免下到捆绑包。",
+    "pages_url": "https://yanwaiyue-name.github.io/agent-download/"
   },
   {
     "order": 4,
@@ -46,10 +49,11 @@
     "desc": "编码代理 / 破甲 Harness / Skills / 免费额度网关 / 代理中转，一键部署 + 自动体检",
     "url": "https://github.com/yanwaiyue-name/ai-agent-hub-zh",
     "repo": "yanwaiyue-name/ai-agent-hub-zh",
-    "local_path": "../ai-agent-hub-zh",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "有了客户端，才谈得上挑编码代理、Skills 和额度网关。",
+    "pages_url": "https://yanwaiyue-name.github.io/ai-agent-hub-zh/"
   },
   {
     "order": 5,
@@ -59,10 +63,11 @@
     "desc": "真实可执行的 AI 副业，每条标成本 / 收益 / 证据等级 / 出处",
     "url": "https://github.com/yanwaiyue-name/ai-sidehustle-zh",
     "repo": "yanwaiyue-name/ai-sidehustle-zh",
-    "local_path": "../ai-sidehustle-zh",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "工具会用了，再看哪些路子真能变现，以及证据有多硬。",
+    "pages_url": "https://yanwaiyue-name.github.io/ai-sidehustle-zh/"
   },
   {
     "order": 6,
@@ -72,9 +77,10 @@
     "desc": "写给 18-25 岁，每条写明成本、收益、证据等级与官方出处",
     "url": "https://github.com/yanwaiyue-name/students-howtolivebetter",
     "repo": "yanwaiyue-name/students-howtolivebetter",
-    "local_path": "../students-howtolivebetter",
     "status": "ok",
     "last_checked": "2026-11-04",
-    "checked_from": "seed"
+    "checked_from": "seed",
+    "why": "最后算大账：时间、钱和不可逆的选择，值不值得投进去。",
+    "pages_url": "https://yanwaiyue-name.github.io/students-howtolivebetter/"
   }
 ]
